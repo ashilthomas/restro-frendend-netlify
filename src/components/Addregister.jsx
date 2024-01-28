@@ -1,19 +1,20 @@
 import React, { useState } from "react";
-import { Alert, Button, Container, Form, Row } from "react-bootstrap";
+import { Button, Container, Form, Row } from "react-bootstrap";
 
-import axios from "axios";
+
 import { useNavigate } from "react-router-dom";
 
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import instance from "../axios";
+
 function Addregister() {
   const [userName, stateName] = useState("");
   const [userEmail, stateEmail] = useState("");
   const [userPassword, statePassword] = useState("");
   const [validated, setValidated] = useState(false);
-
-  const [show, setShow] = useState(false);
+  
+ 
   const navigate = useNavigate();
 
   const handileusername = (e) => {
@@ -38,7 +39,9 @@ function Addregister() {
           fullname: userName,
           email: userEmail,
           password: userPassword,
-        });
+        });  
+        
+      
         if (res.data.success) {
           toast.success(res.data.message, {
             autoClose: 2000,
@@ -53,7 +56,7 @@ function Addregister() {
       } catch (error) {
         toast.error(error.response.data.message);
       }
-      setShow(true);
+   
     
     }
     setValidated(true);

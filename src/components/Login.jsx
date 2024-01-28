@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import { Alert, Button, Container, Form, Row } from "react-bootstrap";
-import axios from "axios";
-
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useNavigate } from "react-router-dom";

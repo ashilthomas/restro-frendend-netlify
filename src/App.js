@@ -16,7 +16,7 @@ import ProtectedRoutes from "./components/utils/ProtectedRoutes";
 import Users from "./components/Users";
 import User from "./components/User";
 import instance from "./axios";
-import { ToastContainer, toast } from "react-toastify";
+import {toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {

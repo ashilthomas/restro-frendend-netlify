@@ -9,7 +9,7 @@ function Details() {
   const restaurants = useSelector((state) => state.data.restaurants);
   
  
-  const current = restaurants.find((a) => a._id == id);
+  const current = restaurants.find((a) => a._id === id);
 
   return (
     <div>

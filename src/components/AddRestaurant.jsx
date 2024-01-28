@@ -4,7 +4,7 @@ import { Alert, Button, Container, Form, Row } from "react-bootstrap";
 import instance from "../axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useNavigate } from "react-router-dom";
+
 function AddRestaurant() {
   const [restaurantName, setRestaurantName] = useState("");
   const [restaurantAdress, setRestaurantAdress] = useState("");
@@ -12,7 +12,7 @@ function AddRestaurant() {
   const [restaurantPhotograph, setRestaurantPhotograph] = useState(null);
   const [validated, setValidated] = useState(false);
   const [show, setShow] = useState(false);
-  const navigate = useNavigate();
+ 
   const handileRestaurantName = (e) => {
     setRestaurantName(e.target.value);
   };
